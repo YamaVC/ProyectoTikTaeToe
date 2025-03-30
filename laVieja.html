@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎲Tic Tac Toe🎲</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!--Instrucciones de juego-->
+    <h1>La Vieja</h1>
+    <div class="instructions">
+        <p><strong>Instrucciones</strong></p>
+        <p>1. Elige el modo de juego: "Contra otro jugador" o "Contra la computadora".</p>
+        <p>2. Haz click en una celda vacia para colocar tu simbolo (X o O).</p>
+        <p>3. Gana el jugador que logre alinear tres de sus simbolos en fila, columna o diagonal.</p>
+        <p>4. Si todas las celdas estan llenas y nadie ha ganado, el juego termina en empate.</p>
+        <p>5. Si intentas jugar en un espacio ocupado, perderas tu turno.</p>
+    </div>
+    <!--Seleccion del tipo de juego-->
+    <div class="mode-selection">
+        <button onclick="startGame('player')">Jugar contra otro jugador</button>
+        <button onclick="startGame('computer')">Jugar contra la computadora</button>
+    </div>
+
+    <!--Grilla del juego-->
+    <div class="game-container" id="gameContainer"></div>
+    <br>
+
+    <!--Boton de reinicio del juego-->
+    <button class="restart" onclick="restartGame()">Reiniciar Juego</button>
+
+    <!--Area de mensaje para resultado del juego-->
+    <div class="message" id="message"></div>
+
+    <!--Audios-->
+    <audio id="winSound" src="https://www.youtube.com/watch?v=rr5CMS2GtCY"></audio>
+    <audio id="errorSound" src="https://www.youtube.com/watch?v=8XThWIO_NEE"></audio>
+    <audio id="clickSound" src= "https://www.youtube.com/watch?v=i0DON3AjhW4"></audio>
+
+    <!--script javascript logica del juego-->
+    <script src="./script.js"></script>
+</body>
+</html>
